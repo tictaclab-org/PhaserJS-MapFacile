@@ -17,7 +17,7 @@
       <div class="main">
         <img src="images/logo.png" alt="">
         <div class="class-title text-center">
-          <h1>PhaserJS #4<br> Carte facile</h1>
+          <h1>PhaserJS #4<br>Easy Map</h1>
         </div>
       </div>
       <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-    <p id=language-link>🗨️ For the english version click<a href="english_index.html"> here</a>!</p>
+  <p id=language-link>🗨️ Pour la version francaise, clique <a href="index.html"> ici</a>!</p>
 
   <div class="container" id="challenge">
 
@@ -67,11 +67,11 @@
           <div class="card-body">
             <p>Le jeu est trop facile pour l'instant tu ne trouves pas? On pourrait ajouter des piques pour le rendre plus compliqué!</p>
 
-            <p>Première étape: dessine tes piques. Tu peux le faire, comme avant, sur <a href="https://www.pixilart.com">pixilart.com</a>, mais si tu préferes un autre site ou télécharger une image, c'est ton choix! Voici mes super piques:</p>
+            <p>D'abord, il te faut dessiner tes piques. Tu peux le faire, comme d'habitude, sur <a href="https://www.pixilart.com">pixilart.com</a>, mais si tu préferes un autre site sens-toi libre!</p>
 
-            <img src="./images/spike.png" alt="Spike">
+            <img src="./images/spike.png" alt="Spike" width="30%">
 
-            <p>Ensuite, <i>charge</i> l'image dans ton code, grâce à la commande <code>this.load.image</code></p>
+            <p>Ensuite, <i>charges</i> le dessin dans ton code, grâce à la commande <code>this.load.image</code></p>
 
             <pre><code class="language-js">
               this.load.image("NOM DE L'OBJET", "NOM DE L'IMAGE");
@@ -79,43 +79,21 @@
 
             <p>Ce code doit bien sûr apparaître dans la fonction <code>preload</code>.</p>
 
-            <p>Ensuite, on va créer un <b>groupe</b> de piques (<em>spikes</em> en anglais). De cette façon, on pourra facilement en ajouter plusieurs sans devoir trop changer notre code. Te rappelles-tu comment on avait fait pour créer un groupe de plateformes?</p>
+            <p>Ensuite, on va créer un <b>groupe</b> de spikes. De cette façon, on pourra facilement en ajouter plusieurs sans devoir trop changer notre code.</p>
 
-            <p>
-              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint" role="button" aria-expanded="false" aria-controls="collapseHint">Indice</a>
-            </p>
-            <div class="collapse mb-3" id="collapseHint">
-              <div class="card card-body">
-                <pre><code class="language-js">
-                  this.platforms = this.physics.add.staticGroup();
-                </code></pre>
-                <p>Note bien que <code>platforms</code> est au pluriel, car il y a plusieurs plateforme<b>s</b>.</p>
-              </div>
-            </div>
+            <pre><code class="language-js">
+              this.spikes = this.physics.add.staticGroup();
+            </code></pre>
 
-            <p>Pour créer un groupe de piques, ton code sera très similaire.</p>
-
-            <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer2" role="button" aria-expanded="false" aria-controls="collapseAnswer2">Réponse</a>
-            </p>
-            <div class="collapse mb-3" id="collapseAnswer2">
-              <div class="card card-body">
-                <pre><code class="language-js">
-                  this.spikes = this.physics.add.staticGroup();
-                </code></pre>
-              </div>
-            </div>
-
-
-            <p>Maintenant que le groupe est créé, tu peux créer tes piques individuelles en utilisant <code>this.spikes.create</code>. Il faut indiquer les coordonnées et l'objet à faire apparaître (<em>spawn</em> en anglais).</p>
+            <p>Pour créer une pique, on utilise alors <code>this.spikes.create</code>. Il faut indiquer les coordonnées et l'object à faire spawner.</p>
 
             <pre><code class="language-js">
               this.spikes.create(X, Y, "NOM DE L'OBJET");
             </code></pre>
 
-            <p>Normalement, si tu as tout bien fait, les piques apparaîssent sur ton écran mais n'ont aucun effet sur le joueur. Changeons cela!</p>
+            <p>Normalement, si tu as tout bien fait, les piques apparaîssent mais n'ont aucun effet sur le joueur. Changeons cela!</p>
 
-            <p>On va ajouter un chevauchement (<em>overlap</em> en anglais) entre le joueur et les piques, comme on l'avait fait pour la pièce gagnante dans la fiche précédente.</p>
+            <p>On va ajouter un <b>overlap</b> entre le joueur et les piques, comme on a fait pour la pièce à la fiche précédente.</p>
 
             <pre><code class="language-js">
               this.physics.add.overlap(this.player, this.spikes, function(player, coin) {
@@ -123,14 +101,14 @@
               }, null, this);
             </code></pre>
 
-            <p>Que doit-il se passer lorsqu'on touche une pique? Notre joueur doit revenir au début du jeu. Pour cela, tu dois changer ses coordonnées X et Y:</p>
+            <p>Ce qui doit se passer lorsqu'on touche une pique est que le joueur devrait revenir au début. Tu peux le remettre au début en changeant ses coordonnées X et Y:</p>
 
             <pre><code class="language-js">
-              this.player.x = /*quelque chose*/;
-              this.player.y = /*quelque chose*/;
+              this.player.x = /*Quelque chose*/;
+              this.player.y = /*Quelque chose*/;
             </code></pre>
 
-            <p>Et voilà, on a des piques! Pas si dur que ça au final, n'est-ce pas?</p>
+            <p>Et voilà, on a des piques! Pas si dur que ça au final hein?</p>
           </div>
         </div>
       </div>
@@ -140,15 +118,13 @@
         <div class="card-header" id="heading3">
           <h2 class="mb-0">
             <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-              Étape 3 - Carte facile 🗺️
+              Étape 3 - Map Facile
             </button>
           </h2>
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître sur notre carte, non? Ce serait plus simple si on pouvait dessiner un schéma de notre carte que notre programme utiliserait pour créer la carte "automatiquement"...</p>
-
-            <p>Regarde ce schéma:</p>
+            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître non? Ce serait plus simple si on pouvait dessiner notre map comme ceci au début et faire tout apparaître par soi-même non?</p>
 
             <pre><code class="language-js">
               '11111111111111111111111111'+
@@ -159,32 +135,17 @@
               '1                        1'+
               '1    c     c     s     s 1'+
               '1 c  1  s  1  c  1  c  1 1'+
-              '1 1     1     1     2    1'+
+              '1 1     1     1     1    1'+
               '1                        1'+
               '1    c     s     c     c 1'+
-              '1 s  2  c  1  c  1  s  1 1'+
+              '1 s  1  c  1  c  1  s  1 1'+
               '1 1     1     1     1    1'+
               '1                        1'+
               '1   c       c     c   c  1'+
               '11111111111111111111111111';
             </code></pre>
 
-            <p>Peux-tu deviner à quoi correspondent les <code>1</code>, <code>2</code>, <code>c</code> et les <code>s</code>?</p>
-
-            <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3a" role="button" aria-expanded="false" aria-controls="collapseAnswer3a">Réponse</a>
-            </p>
-            <div class="collapse mb-3" id="collapseAnswer3a">
-              <div class="card card-body">
-                <p>Les <code>c</code> correspondent aux pièces (<em>coin</em> en anglais).</p>
-                <p>Les <code>s</code> correspondent aux piques (<em>spike</em> en anglais).</p>
-                <p>Les <code>1</code> et les <code>2</code> correspondent aux plateformes. On verra à l'étape suivante qu'il peut y avoir plusieurs types de plateformes.</p>
-              </div>
-            </div>
-
-            <p>Ce schéma est super important! C'est ce qui va nous permettre de créer un très très grand monde rapidement. La première chose que tu dois faire, c'est créer ton propre schéma. Commence avec seulement des plateformes (<code>1</code>).</p>
-
-            <p>Sauvegarde ensuite ton schéma dans une <b>constante</b> qu'on appellera <code>map</code> (<em>carte</em> en anglais). Tu peux déclarer cette constante tout en haut de ton programme, avant même de déclarer la variable <code>config</code>. Voici mon exemple de schéma simple:</p>
+            <p>Faisons cela alors! Commencer par créer ta map. On va la stocker dans une <b>constante</b> qu'on appellera <code>map</code>. Tu peux créer cette constante tout en haut de ton code, avant la variable <code>config</code>.</p>
 
             <pre><code class="language-js">
               const map = '           ' +
@@ -194,113 +155,34 @@
                           '       1   ';
             </code></pre>
 
-            <div class="alert alert-warning" role="alert">
-              <p>
-                <i class="fas fa-exclamation-circle"></i> Assure-toi que chaque ligne:
-                <ul>
-                  <li>ait deux guillemets (<code>'</code>), un au début et un à la fin;</li>
-                  <li>contienne le même nombre de caractères (les espaces comptent aussi!)</li>
-                  <li>finisse par un <code>+</code> sauf la dernière qui finit par un <code>;</code></li>
-                </ul>
-              </p>
-            </div>
+            <p>Sois bien sûr que chaque ligne contienne le même nombre de charactères (Espaces compris), et que tu aies un "+" à la fin de chaque ligne.</p>
 
+            <p>Dans la fonction <code>create</code>, tu peux enlever la partie où tu fais apparaître toutes les palteformes. On va le faire en fonction de notre nouvelle constante, pour se simplifier la vie.</p>
 
-            <p>Dans la fonction <code>create</code>, tu peux mettre en commentaire (avec les <code>//</code>) la partie où tu faisais apparaître toutes tes plateformes. Si tu lances ton programme, elles ont disparu... c'est normal!</p>
-
-            <pre>
-              <code class="language-js">
-              this.platforms = this.physics.add.staticGroup();
-              // this.platforms.create(500, 200, "platform");
-              // this.platforms.create(300, 100, "platform");
-              // this.platforms.create(100, 564, "platform");
-              </code>
-            </pre>
-
-            <p>On va faire apparaître nos plateformes en fonction de notre schéma sauvegardé dans notre constante <code>map</code>. L'ordinateur va analyser notre schéma, ligne par ligne et caractère par caractère. Si l'ordinateur voit un espace, il ne fera rien. Par contre, si l'ordinateur voit un <code>1</code>, il créera une plateforme à cet endroit.</p>
-
-            <p>Pour que l'ordinateur sache où positionner exactement les plateformes sur l'écran, on va créer une variable "X" et une variable "Y" . Dans la fonction <code>create</code>, ajoute tes variables:</p>
+            <p>On doit avoir une variable "X" et une variable "Y" pour savoir où on est entrain de placer nos blocks. </p>
 
             <pre><code class="language-js">
               let X = 40;
               let Y = 40;
             </code></pre>
 
-            <p>Ensuite, on va ajouter deux boucles <code>for</code>... l'une dans l'autre 🤯. Pourquoi???</p>
-
-            <p>
-              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint3" role="button" aria-expanded="false" aria-controls="collapseHint3">Indice</a>
-            </p>
-            <div class="collapse mb-3" id="collapseHint3">
-              <div class="card card-body">
-                <p>C'est parce qu'on veut que l'ordinateur analyse chaque ligne de notre schéma (première boucle), et pour chaque ligne, on veut qu'il analyse chaque caractère (deuxième boucle). </p>
-              </div>
-            </div>
-
-            <p>Commençons par la première boucle (pour analyser chaque ligne de notre schéma):</p>
+            <p>Ensuite, on deux boucles <code>for</code> l'une dans l'autre. C'est parce qu'on veut dessiner chaque ligne, et pour chaque ligne, on veut dessiner chaque block. </p>
 
             <pre><code class="language-js">
-              for (let l = 0; l < 5; l++) {
-                // faire quelque chose pour chaque ligne
+              for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 11; j++) {
+                  // Dessiner les blocks
+                }
               }
             </code></pre>
 
-            <p>Pourquoi ma boucle se répète-t-elle 5 fois?</p>
-
-            <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3c" role="button" aria-expanded="false" aria-controls="collapseAnswer3c">Réponse</a>
-            </p>
-            <div class="collapse mb-3" id="collapseAnswer3c">
-              <div class="card card-body">
-              <p>Parce que dans mon schéma (<code>map</code>), il y a 5 lignes. Si ton schéma a 7 lignes, ta boucle ressemblera plutôt à ceci: </p>
-              <pre><code class="language-js">
-                for (let l = 0; l < 7; l++) {
-                  // faire quelque chose pour chaque ligne
-                }
-              </code></pre>
-              </div>
-            </div>
-
-            <p>À la fin de chaque ligne, que doit-on faire? Eh oui, passer à la ligne suivante! Pour l'ordinateur, ça veut dire que les coordonnées en Y doivent changer. Comment faire pour faire "descendre" les coordonnées en Y?</p>
-
-            <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3d" role="button" aria-expanded="false" aria-controls="collapseAnswer3d">Réponse</a>
-            </p>
-            <div class="collapse mb-3" id="collapseAnswer3d">
-              <div class="card card-body">
-              <p>On ajoute 40 à notre variable <code>Y</code></p>
-                <pre><code class="language-js">
-                  for (let l = 0; l < 5; l++) {
-                    // faire quelque chose pour chaque ligne
-
-                    // descendre à la ligne suivante:
-                    Y += 40;
-                  }
-                </code></pre>
-
-              </div>
-            </div>
-
-            <p>Nous sommes maintenant prêts à analyser chacune de nos lignes. Or dans chaque ligne, il y a le même nombre de caractères (11 dans mon schéma). Je vais donc ajouter ma deuxième boucle de cette manière:</p>
-
-
-            <pre><code class="language-js">
-              for (let l = 0; l < 5; l++) {
-
-                for (let c = 0; c < 11; c++) {
-                  // Analyser chacun des caractères
-                }
-
-                // descendre à la ligne suivante:
-                Y += 40;
-              }
-            </code></pre>
+            <p>Ici, j'ai mis <code>5</code> et <code>11</code> parce que j'ai <b>5</b> lignes et <b>11</b> caractères par ligne. Change les nombres pour que cela corresponde à ton dessin.</p>
 
             <p>Après avoir dessiné chaque block, on veut changer les coordonnées X et Y auquels on dessine. Quand on change de ligne, on doit aussi remettre X au début.</p>
 
             <pre><code class="language-js">
-              for (let l = 0; l < 5; l++) {
-                for (let c = 0; c < 11; c++) {
+              for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 11; j++) {
                   // Dessiner les blocks
                   X += 40;
                 }
@@ -309,11 +191,11 @@
               }
             </code></pre>
 
-            <p>Dans la deuxième boucle, on va dessiner les plateformes. Mais attetion! L'ordinateur doit créer une plateforme uniquement si le caractère qu'il analyse est un <code>1</code>. On va donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
+            <p>Maintenant on veut dessiner un bloc, mais uniquement si le carachtère à cette place est un "1". On va donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
 
             <pre><code class="language-js">
-              let ca = map[11*l+c];
-              if (ca === '1') {
+              let c = map[11*i+j];
+              if (c === '1') {
                 this.platforms.create(X, Y, "platform");
               }
             </code></pre>
@@ -325,9 +207,9 @@
             <p>On pourrait aussi ajouter nos piques dans la map directement. Pour ce faire, écris un "p" la où tu veux tes piques, et ajoute un <code>else if</code> dans ton code</p>
 
             <pre><code class="language-js">
-              if (ca === '1') {
+              if (c === '1') {
                 // ...
-              } else if (ca === 'p') {
+              } else if (c === 'p') {
                 // Dessiner une pique aux coordonnées X et Y
               }
             </code></pre>
