@@ -146,9 +146,9 @@
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître sur notre carte, non? Ce serait plus simple si on pouvait dessiner un schéma de notre carte que notre programme utiliserait pour créer la carte "automatiquement"...</p>
+            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître sur notre carte, non? Ce serait plus simple si on pouvait dessiner une grille de notre carte que notre programme utiliserait pour créer la carte "automatiquement"...</p>
 
-            <p>Regarde ce schéma:</p>
+            <p>Regarde cette grille:</p>
 
             <pre><code class="language-js">
               '11111111111111111111111111'+
@@ -182,9 +182,9 @@
               </div>
             </div>
 
-            <p>Ce schéma est super important! C'est ce qui va nous permettre de créer un très très grand monde rapidement. La première chose que tu dois faire, c'est créer ton propre schéma. Commence avec seulement des plateformes (<code>1</code>).</p>
+            <p>Cette grille est super important! C'est ce qui va nous permettre de créer un très très grand monde rapidement. La première chose que tu dois faire, c'est créer ta propre grille. Commence avec seulement des plateformes (<code>1</code>).</p>
 
-            <p>Sauvegarde ensuite ton schéma dans une <b>constante</b> qu'on appellera <code>map</code> (<em>carte</em> en anglais). Tu peux déclarer cette constante tout en haut de ton programme, avant même de déclarer la variable <code>config</code>. Voici mon exemple de schéma simple:</p>
+            <p>Sauvegarde ensuite ta grille dans une <b>constante</b> qu'on appellera <code>map</code> (<em>carte</em> en anglais). Tu peux déclarer cette constante tout en haut de ton programme, avant même de déclarer la variable <code>config</code>. Voici mon exemple de grille simple:</p>
 
             <pre><code class="language-js">
               const map = '           ' +
@@ -217,7 +217,7 @@
               </code>
             </pre>
 
-            <p>On va faire apparaître nos plateformes en fonction de notre schéma sauvegardé dans notre constante <code>map</code>. L'ordinateur va analyser notre schéma, ligne par ligne et caractère par caractère. Si l'ordinateur voit un espace, il ne fera rien. Par contre, si l'ordinateur voit un <code>1</code>, il créera une plateforme à cet endroit.</p>
+            <p>On va faire apparaître nos plateformes en fonction de notre grille sauvegardée dans notre constante <code>map</code>. L'ordinateur va analyser notre grille, ligne par ligne et colonne par colonne. Dans une case, si l'ordinateur voit un espace, il ne fera rien. Par contre, si l'ordinateur voit un <code>1</code>, il créera une plateforme à cet endroit.</p>
 
             <p>Pour que l'ordinateur sache où positionner exactement les plateformes sur l'écran, on va créer une variable "X" et une variable "Y" . Dans la fonction <code>create</code>, ajoute tes variables:</p>
 
@@ -233,11 +233,11 @@
             </p>
             <div class="collapse mb-3" id="collapseHint3">
               <div class="card card-body">
-                <p>C'est parce qu'on veut que l'ordinateur analyse chaque ligne de notre schéma (première boucle), et pour chaque ligne, on veut qu'il analyse chaque caractère (deuxième boucle). </p>
+                <p>C'est parce qu'on veut que l'ordinateur analyse chaque ligne de notre grille (première boucle), et pour chaque ligne, on veut qu'il analyse chaque colonne (deuxième boucle). </p>
               </div>
             </div>
 
-            <p>Commençons par la première boucle (pour analyser chaque ligne de notre schéma):</p>
+            <p>Commençons par la première boucle (pour analyser chaque ligne de notre grille):</p>
 
             <pre><code class="language-js">
               for (let l = 0; l < 5; l++) {
@@ -252,7 +252,7 @@
             </p>
             <div class="collapse mb-3" id="collapseAnswer3c">
               <div class="card card-body">
-              <p>Parce que dans mon schéma (<code>map</code>), il y a 5 lignes. Si ton schéma a 7 lignes, ta boucle ressemblera plutôt à ceci: </p>
+              <p>Parce que dans mon grille (<code>map</code>), il y a 5 lignes. Si ta grille a 7 lignes, ta boucle ressemblera plutôt à ceci: </p>
               <pre><code class="language-js">
                 for (let l = 0; l < 7; l++) {
                   // faire quelque chose pour chaque ligne
@@ -281,14 +281,14 @@
               </div>
             </div>
 
-            <p>Nous sommes maintenant prêts à analyser chacune de nos lignes. Or dans chaque ligne, il y a le même nombre de caractères (11 dans mon schéma). Je vais donc ajouter ma deuxième boucle de cette manière:</p>
+            <p>Nous sommes maintenant prêts à analyser chacune de nos lignes, colonne, par colonne. Or dans chaque ligne, il y a le même nombre de colonnes (11 dans mon grille). Je vais donc ajouter ma deuxième boucle de cette manière:</p>
 
 
             <pre><code class="language-js">
               for (let l = 0; l < 5; l++) {
 
                 for (let c = 0; c < 11; c++) {
-                  // Analyser chacun des caractères
+                  // Analyser chacune des case de la grille
                 }
 
                 // descendre à la ligne suivante:
@@ -296,33 +296,66 @@
               }
             </code></pre>
 
-            <p>Après avoir dessiné chaque block, on veut changer les coordonnées X et Y auquels on dessine. Quand on change de ligne, on doit aussi remettre X au début.</p>
+
+            <p>Dans la deuxième boucle, on va dessiner les plateformes. Mais attention! L'ordinateur doit créer une plateforme uniquement si le caractère dans la case qu'il analyse est un <code>1</code>. On va donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
 
             <pre><code class="language-js">
-              for (let l = 0; l < 5; l++) {
-                for (let c = 0; c < 11; c++) {
-                  // Dessiner les blocks
-                  X += 40;
-                }
-                X = 40;
-                Y += 40;
+              let ca = map[11*l + c];
+              if (ca === '1') {
+                this.platforms.create(X, Y, "platform");
               }
             </code></pre>
-
-            <p>Dans la deuxième boucle, on va dessiner les plateformes. Mais attetion! L'ordinateur doit créer une plateforme uniquement si le caractère qu'il analyse est un <code>1</code>. On va donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
-
             <pre><code class="language-js">
-              let ca = map[11*l+c];
+              let ca = map[11*l + c];
               if (ca === '1') {
                 this.platforms.create(X, Y, "platform");
               }
             </code></pre>
 
-            <p>De nouveau, si tu n'as pas <b>11</b> caractères par ligne, change le <b>11</b> en un autre nombre.</p>
+            <p>De nouveau, si tu n'as pas <b>11</b> colonnes (ou caractères) par ligne, change le <b>11</b> en un autre nombre.</p>
+
+            <p>Pour passer à la case suivante, il suffit d'incrémenter notre valeur en X:</p>
+
+            <pre><code class="language-js">
+              let ca = map[11*l + c];
+              if (ca === '1') {
+                this.platforms.create(X, Y, "platform");
+              }
+              let ca = map[11*l + c];
+              if (ca === '1') {
+                this.platforms.create(X, Y, "platform");
+              }
+
+              // passer à la case suivante:
+              X += 40;
+            </code></pre>
+
+            <p>Dernière étape: quand on change de ligne, on doit aussi remettre la coordonnée X au début de la ligne.</p>
+
+            <pre><code class="language-js">
+              for (let l = 0; l < 5; l++) {
+
+                for (let c = 0; c < 11; c++) {
+                  // Analyser la case et dessiner une plateforme si nécessaire
+                  let ca = map[11*l + c];
+                  if (ca === '1') {
+                    this.platforms.create(X, Y, "platform");
+                  }
+
+                  // passer à la case suivante:
+                  X += 40;
+                }
+
+                // passer à la ligne suivante:
+                Y += 40;
+                // aller au début de la ligne suivante:
+                X = 40;
+              }
+            </code></pre>
 
             <p>Maintenant ton code va dessiner toutes les plateformes tout seul!</p>
 
-            <p>On pourrait aussi ajouter nos piques dans la map directement. Pour ce faire, écris un "p" la où tu veux tes piques, et ajoute un <code>else if</code> dans ton code</p>
+            <p>On pourrait aussi ajouter nos piques dans la carte directement. Pour ce faire, écris un "p" la où tu veux tes piques, et ajoute un <code>else if</code> dans ton code</p>
 
             <pre><code class="language-js">
               if (ca === '1') {
@@ -332,7 +365,7 @@
               }
             </code></pre>
 
-            <p><b>Challenge: </b>Tu peux aussi faire pareil avec la pièce!</p>
+            <p><b>Challenge: </b>Fais la même chose pour tes pièces!</p>
 
           </div>
         </div>
@@ -349,7 +382,7 @@
         </div>
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Tu te demandes surement pourquoi on a mis "1" pour les palteformes et non "p" (Ou une autre lettre). C'est parce qu'on pourrait avoir différents types de plateformes. Crées une deuxième plateforme et <code>load</code> la correctement dans ton code, sous le nom de "platform2"</p>
+            <p>Tu te demandes surement pourquoi on a mis "1" pour les palteformes et non "p" (ou une autre lettre)? C'est parce qu'on pourrait avoir différents types de plateformes. Crées une deuxième plateforme et <code>load</code> la correctement dans ton code, sous le nom de "platform2"</p>
 
             <p>Ensuite, si le carctère est égal à "2", tu vas simplement créer cette deuxième plateforme.</p>
 
@@ -367,7 +400,7 @@
 
             <p>Commencer par soit dessiner soit trouver une image d'arrière-plan qui te plaît! Lorsque c'est le cas, <code>load</code> cette image comme tu as load toutes les autres.</p>
 
-            <p>Ensuite, dans la fonction <code>create</code>, on va afficher cette image. Sois sûr que c'est la première chose que tu fais, pour qu'elle apparaîsse bien derrière tout le reste.</p>
+            <p>Ensuite, dans la fonction <code>create</code>, on va afficher cette image. Assure-toi que c'est la première chose que tu fais, pour qu'elle apparaisse bien derrière tout le reste.</p>
 
             <pre><code class="language-js">
               this.add.image(400, 250, 'background').setDisplaySize(800, 500);
