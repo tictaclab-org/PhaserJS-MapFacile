@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>PhaserJS #4</title>
-  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png" />
   <link rel="stylesheet" href="stylesheet/prism.css">
   <link rel="stylesheet" href="stylesheet/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
 
   <!-- Introduction -->
-  <div class="banner" style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
+  <div class="banner"
+    style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
     <div class="container text-center">
       <div class="main">
         <img src="images/logo.png" alt="">
@@ -20,7 +25,8 @@
           <h1>PhaserJS #4<br>Easy Map</h1>
         </div>
       </div>
-      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
+      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour
+        ce faire, on se servira de la librarie <b>Phaser</b>.</p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
@@ -35,7 +41,8 @@
       <div class="card">
         <div class="card-header" id="heading1">
           <h2 class="mb-0">
-            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1"
+              aria-expanded="false" aria-controls="collapse1">
               Étape 1 - Défis à compléter avant
             </button>
           </h2>
@@ -49,7 +56,8 @@
               <li><a href="https://techieslab.github.io/PhaserJS-GagnerPerdre/">PhaserJS - Gagner et Perdre</a></li>
             </ul>
             <p>Ensuite, assure-toi de te munir d'une grande motivation et soif d'apprendre!</p>
-            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu aies ton projet de la fois passée.</p>
+            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu
+              aies ton projet de la fois passée.</p>
           </div>
         </div>
       </div>
@@ -58,16 +66,19 @@
       <div class="card">
         <div class="card-header" id="heading2">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2"
+              aria-expanded="false" aria-controls="collapse2">
               Étape 2 - Des piques
             </button>
           </h2>
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Le jeu est trop facile pour l'instant tu ne trouves pas? On pourrait ajouter des piques pour le rendre plus compliqué!</p>
+            <p>Le jeu est trop facile pour l'instant tu ne trouves pas? On pourrait ajouter des piques pour le rendre
+              plus compliqué!</p>
 
-            <p>D'abord, il te faut dessiner tes piques. Tu peux le faire, comme d'habitude, sur <a href="https://www.pixilart.com">pixilart.com</a>, mais si tu préferes un autre site sens-toi libre!</p>
+            <p>D'abord, il te faut dessiner tes piques. Tu peux le faire, comme d'habitude, sur <a
+                href="https://www.pixilart.com">pixilart.com</a>, mais si tu préferes un autre site sens-toi libre!</p>
 
             <img src="./images/spike.png" alt="Spike" width="30%">
 
@@ -79,21 +90,25 @@
 
             <p>Ce code doit bien sûr apparaître dans la fonction <code>preload</code>.</p>
 
-            <p>Ensuite, on va créer un <b>groupe</b> de spikes. De cette façon, on pourra facilement en ajouter plusieurs sans devoir trop changer notre code.</p>
+            <p>Ensuite, on va créer un <b>groupe</b> de spikes. De cette façon, on pourra facilement en ajouter
+              plusieurs sans devoir trop changer notre code.</p>
 
             <pre><code class="language-js">
               this.spikes = this.physics.add.staticGroup();
             </code></pre>
 
-            <p>Pour créer une pique, on utilise alors <code>this.spikes.create</code>. Il faut indiquer les coordonnées et l'object à faire spawner.</p>
+            <p>Pour créer une pique, on utilise alors <code>this.spikes.create</code>. Il faut indiquer les coordonnées
+              et l'object à faire spawner.</p>
 
             <pre><code class="language-js">
               this.spikes.create(X, Y, "NOM DE L'OBJET");
             </code></pre>
 
-            <p>Normalement, si tu as tout bien fait, les piques apparaîssent mais n'ont aucun effet sur le joueur. Changeons cela!</p>
+            <p>Normalement, si tu as tout bien fait, les piques apparaîssent mais n'ont aucun effet sur le joueur.
+              Changeons cela!</p>
 
-            <p>On va ajouter un <b>overlap</b> entre le joueur et les piques, comme on a fait pour la pièce à la fiche précédente.</p>
+            <p>On va ajouter un <b>overlap</b> entre le joueur et les piques, comme on a fait pour la pièce à la fiche
+              précédente.</p>
 
             <pre><code class="language-js">
               this.physics.add.overlap(this.player, this.spikes, function(player, coin) {
@@ -101,7 +116,8 @@
               }, null, this);
             </code></pre>
 
-            <p>Ce qui doit se passer lorsqu'on touche une pique est que le joueur devrait revenir au début. Tu peux le remettre au début en changeant ses coordonnées X et Y:</p>
+            <p>Ce qui doit se passer lorsqu'on touche une pique est que le joueur devrait revenir au début. Tu peux le
+              remettre au début en changeant ses coordonnées X et Y:</p>
 
             <pre><code class="language-js">
               this.player.x = /*Quelque chose*/;
@@ -117,14 +133,16 @@
       <div class="card">
         <div class="card-header" id="heading3">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3"
+              aria-expanded="false" aria-controls="collapse3">
               Étape 3 - Map Facile
             </button>
           </h2>
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître non? Ce serait plus simple si on pouvait dessiner notre map comme ceci au début et faire tout apparaître par soi-même non?</p>
+            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître non? Ce serait plus
+              simple si on pouvait dessiner notre map comme ceci au début et faire tout apparaître par soi-même non?</p>
 
             <pre><code class="language-js">
               '11111111111111111111111111'+
@@ -145,7 +163,9 @@
               '11111111111111111111111111';
             </code></pre>
 
-            <p>Faisons cela alors! Commencer par créer ta map. On va la stocker dans une <b>constante</b> qu'on appellera <code>map</code>. Tu peux créer cette constante tout en haut de ton code, avant la variable <code>config</code>.</p>
+            <p>Faisons cela alors! Commencer par créer ta map. On va la stocker dans une <b>constante</b> qu'on
+              appellera <code>map</code>. Tu peux créer cette constante tout en haut de ton code, avant la variable
+              <code>config</code>.</p>
 
             <pre><code class="language-js">
               const map = '           ' +
@@ -155,18 +175,22 @@
                           '       1   ';
             </code></pre>
 
-            <p>Sois bien sûr que chaque ligne contienne le même nombre de charactères (Espaces compris), et que tu aies un "+" à la fin de chaque ligne.</p>
+            <p>Sois bien sûr que chaque ligne contienne le même nombre de charactères (Espaces compris), et que tu aies
+              un "+" à la fin de chaque ligne.</p>
 
-            <p>Dans la fonction <code>create</code>, tu peux enlever la partie où tu fais apparaître toutes les palteformes. On va le faire en fonction de notre nouvelle constante, pour se simplifier la vie.</p>
+            <p>Dans la fonction <code>create</code>, tu peux enlever la partie où tu fais apparaître toutes les
+              palteformes. On va le faire en fonction de notre nouvelle constante, pour se simplifier la vie.</p>
 
-            <p>On doit avoir une variable "X" et une variable "Y" pour savoir où on est entrain de placer nos blocks. </p>
+            <p>On doit avoir une variable "X" et une variable "Y" pour savoir où on est entrain de placer nos blocks.
+            </p>
 
             <pre><code class="language-js">
               let X = 40;
               let Y = 40;
             </code></pre>
 
-            <p>Ensuite, on deux boucles <code>for</code> l'une dans l'autre. C'est parce qu'on veut dessiner chaque ligne, et pour chaque ligne, on veut dessiner chaque block. </p>
+            <p>Ensuite, on deux boucles <code>for</code> l'une dans l'autre. C'est parce qu'on veut dessiner chaque
+              ligne, et pour chaque ligne, on veut dessiner chaque block. </p>
 
             <pre><code class="language-js">
               for (let i = 0; i < 5; i++) {
@@ -176,9 +200,11 @@
               }
             </code></pre>
 
-            <p>Ici, j'ai mis <code>5</code> et <code>11</code> parce que j'ai <b>5</b> lignes et <b>11</b> caractères par ligne. Change les nombres pour que cela corresponde à ton dessin.</p>
+            <p>Ici, j'ai mis <code>5</code> et <code>11</code> parce que j'ai <b>5</b> lignes et <b>11</b> caractères
+              par ligne. Change les nombres pour que cela corresponde à ton dessin.</p>
 
-            <p>Après avoir dessiné chaque block, on veut changer les coordonnées X et Y auquels on dessine. Quand on change de ligne, on doit aussi remettre X au début.</p>
+            <p>Après avoir dessiné chaque block, on veut changer les coordonnées X et Y auquels on dessine. Quand on
+              change de ligne, on doit aussi remettre X au début.</p>
 
             <pre><code class="language-js">
               for (let i = 0; i < 5; i++) {
@@ -191,7 +217,8 @@
               }
             </code></pre>
 
-            <p>Maintenant on veut dessiner un bloc, mais uniquement si le carachtère à cette place est un "1". On va donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
+            <p>Maintenant on veut dessiner un bloc, mais uniquement si le carachtère à cette place est un "1". On va
+              donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
 
             <pre><code class="language-js">
               let c = map[11*i+j];
@@ -204,7 +231,8 @@
 
             <p>Maintenant ton code va dessiner toutes les plateformes tout seul!</p>
 
-            <p>On pourrait aussi ajouter nos piques dans la map directement. Pour ce faire, écris un "p" la où tu veux tes piques, et ajoute un <code>else if</code> dans ton code</p>
+            <p>On pourrait aussi ajouter nos piques dans la map directement. Pour ce faire, écris un "p" la où tu veux
+              tes piques, et ajoute un <code>else if</code> dans ton code</p>
 
             <pre><code class="language-js">
               if (c === '1') {
@@ -224,14 +252,17 @@
       <div class="card">
         <div class="card-header" id="heading4">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4"
+              aria-expanded="false" aria-controls="collapse4">
               Étape 4 - Différentes plateformes
             </button>
           </h2>
         </div>
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Tu te demandes surement pourquoi on a mis "1" pour les palteformes et non "p" (Ou une autre lettre). C'est parce qu'on pourrait avoir différents types de plateformes. Crées une deuxième plateforme et <code>load</code> la correctement dans ton code, sous le nom de "platform2"</p>
+            <p>Tu te demandes surement pourquoi on a mis "1" pour les palteformes et non "p" (Ou une autre lettre).
+              C'est parce qu'on pourrait avoir différents types de plateformes. Crées une deuxième plateforme et
+              <code>load</code> la correctement dans ton code, sous le nom de "platform2"</p>
 
             <p>Ensuite, si le carctère est égal à "2", tu vas simplement créer cette deuxième plateforme.</p>
 
@@ -247,9 +278,11 @@
 
             <p>Ce serait cool de pouvoir changer l'arrière-plan aussi non? Noir c'est un peu déprimant...</p>
 
-            <p>Commencer par soit dessiner soit trouver une image d'arrière-plan qui te plaît! Lorsque c'est le cas, <code>load</code> cette image comme tu as load toutes les autres.</p>
+            <p>Commencer par soit dessiner soit trouver une image d'arrière-plan qui te plaît! Lorsque c'est le cas,
+              <code>load</code> cette image comme tu as load toutes les autres.</p>
 
-            <p>Ensuite, dans la fonction <code>create</code>, on va afficher cette image. Sois sûr que c'est la première chose que tu fais, pour qu'elle apparaîsse bien derrière tout le reste.</p>
+            <p>Ensuite, dans la fonction <code>create</code>, on va afficher cette image. Sois sûr que c'est la première
+              chose que tu fais, pour qu'elle apparaîsse bien derrière tout le reste.</p>
 
             <pre><code class="language-js">
               this.add.image(400, 250, 'background').setDisplaySize(800, 500);
@@ -257,7 +290,8 @@
 
             <p>On fait apparaître l'image au milieu de l'écran, et on change la taille pour remplir tout l'écran.</p>
 
-            <p>Tu verra surement que cela ne couvre quand même pas tout l'écran. Pour ce changer, on fait simplement apparaître plusieurs images:</p>
+            <p>Tu verra surement que cela ne couvre quand même pas tout l'écran. Pour ce changer, on fait simplement
+              apparaître plusieurs images:</p>
 
             <pre><code class="language-js">
               this.add.image(-1200, 250, 'background').setDisplaySize(800, 500);
@@ -267,7 +301,8 @@
               this.add.image(1600, 250, 'background').setDisplaySize(800, 500);
             </code></pre>
 
-            <p>Voilà, tu as maintenant un joli arrière-plan! Tu peux alors rendre ton jeu aussi long que tu le veuilles :)</p>
+            <p>Voilà, tu as maintenant un joli arrière-plan! Tu peux alors rendre ton jeu aussi long que tu le veuilles
+              :)</p>
 
           </div>
         </div>
@@ -279,22 +314,30 @@
 
 
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
-    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.linkedin.com/company/techies-lab/"><i class="fab fa-linkedin"></i></a>
-    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://tictaclab.org/"><i class="fas fa-globe"></i></i></a>
+      <a href="https://www.linkedin.com/company/tictaclab/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/TicTacLabBXL/"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/tictaclabbxl/"><i class="fab fa-instagram"></i></a>
+      <a href="https://tictaclab-org.github.io/Fiches/"><i class="fa fa-list"></i> Back to the Activity Sheets</a>
+    </div>
+    <div class="footer-copyright">
+      <a href="https://tictaclab.org" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+        <i class="far fa-copyright"></i> 2023 Tic Tac Lab ASBL. All rights reserved.
+      </a>
+    </div>
   </div>
-  <div class="footer-copyright">
-    <a href="https://techieslab.be" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
-      <i class="far fa-copyright"></i> 2021 Techies Lab ASBL. All rights reserved.
-    </a>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="javascript/prism.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="javascript/prism.js"></script>
 </body>
+
 </html>

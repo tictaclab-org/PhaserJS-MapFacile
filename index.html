@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>PhaserJS #4</title>
-  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png" />
   <link rel="stylesheet" href="stylesheet/prism.css">
   <link rel="stylesheet" href="stylesheet/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
 
   <!-- Introduction -->
-  <div class="banner" style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
+  <div class="banner"
+    style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
     <div class="container text-center">
       <div class="main">
         <img src="images/logo.png" alt="">
@@ -20,12 +25,14 @@
           <h1>PhaserJS #4<br> Carte facile</h1>
         </div>
       </div>
-      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
+      <p>Pour ce module, on se concentre sur la création de jeux vidéos dans le language JavaScript et la librarie
+        <b>Phaser</b>.
+      </p>
       <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
     </div>
   </div>
 
-    <p id=language-link>🗨️ For the english version click<a href="english_index.html"> here</a>!</p>
+  <p id=language-link>🗨️ For the english version click<a href="english_index.html"> here</a>!</p>
 
   <div class="container" id="challenge">
 
@@ -35,21 +42,22 @@
       <div class="card">
         <div class="card-header" id="heading1">
           <h2 class="mb-0">
-            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1"
+              aria-expanded="false" aria-controls="collapse1">
               Étape 1 - Défis à compléter avant
             </button>
           </h2>
         </div>
         <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Avant d'entamer ce défi, assure toi d'avoir déjà fait ceux ci:</p>
+            <p>Avant d'entamer ce défi, assure-toi d'avoir déjà fait ceux-ci:</p>
             <ul>
               <li><a href="https://techieslab.github.io/PhaserJS-Introduction/">PhaserJS - Personnage</a></li>
               <li><a href="https://techieslab.github.io/PhaserJS-Platforms/">PhaserJS - Plateformes</a></li>
               <li><a href="https://techieslab.github.io/PhaserJS-GagnerPerdre/">PhaserJS - Gagner et Perdre</a></li>
             </ul>
-            <p>Ensuite, assure-toi de te munir d'une grande motivation et soif d'apprendre!</p>
-            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu aies ton projet de la fois passée.</p>
+            <p>Aussi, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu
+              aies ton projet de la fois passée.</p>
           </div>
         </div>
       </div>
@@ -58,16 +66,20 @@
       <div class="card">
         <div class="card-header" id="heading2">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2"
+              aria-expanded="false" aria-controls="collapse2">
               Étape 2 - Des piques
             </button>
           </h2>
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Le jeu est trop facile pour l'instant tu ne trouves pas? On pourrait ajouter des piques pour le rendre plus compliqué!</p>
+            <p>Le jeu est trop facile pour l'instant tu ne trouves pas? On pourrait ajouter des piques pour le rendre
+              plus compliqué!</p>
 
-            <p>Première étape: dessine tes piques. Tu peux le faire, comme avant, sur <a href="https://www.pixilart.com">pixilart.com</a>, mais si tu préferes un autre site ou télécharger une image, c'est ton choix! Voici mes super piques:</p>
+            <p>Première étape: dessine tes piques. Tu peux le faire, comme avant, sur <a
+                href="https://www.pixilart.com">pixilart.com</a>, mais si tu préferes un autre site ou télécharger une
+              image, c'est ton choix! Voici mes super piques:</p>
 
             <img src="./images/spike.png" alt="Spike">
 
@@ -79,10 +91,13 @@
 
             <p>Ce code doit bien sûr apparaître dans la fonction <code>preload</code>.</p>
 
-            <p>Ensuite, on va créer un <b>groupe</b> de piques (<em>spikes</em> en anglais). De cette façon, on pourra facilement en ajouter plusieurs sans devoir trop changer notre code. Te rappelles-tu comment on avait fait pour créer un groupe de plateformes?</p>
+            <p>Ensuite, on va créer un <b>groupe</b> de piques (<em>spikes</em> en anglais). De cette façon, on pourra
+              facilement en ajouter plusieurs sans devoir trop changer notre code. Te rappelles-tu comment on avait fait
+              pour créer un groupe de plateformes?</p>
 
             <p>
-              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint" role="button" aria-expanded="false" aria-controls="collapseHint">Indice</a>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint" role="button" aria-expanded="false"
+                aria-controls="collapseHint">Indice</a>
             </p>
             <div class="collapse mb-3" id="collapseHint">
               <div class="card card-body">
@@ -96,7 +111,8 @@
             <p>Pour créer un groupe de piques, ton code sera très similaire.</p>
 
             <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer2" role="button" aria-expanded="false" aria-controls="collapseAnswer2">Réponse</a>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer2" role="button"
+                aria-expanded="false" aria-controls="collapseAnswer2">Réponse</a>
             </p>
             <div class="collapse mb-3" id="collapseAnswer2">
               <div class="card card-body">
@@ -107,15 +123,20 @@
             </div>
 
 
-            <p>Maintenant que le groupe est créé, tu peux créer tes piques individuelles en utilisant <code>this.spikes.create</code>. Il faut indiquer les coordonnées et l'objet à faire apparaître (<em>spawn</em> en anglais).</p>
+            <p>Maintenant que le groupe est créé, tu peux créer tes piques individuelles en utilisant
+              <code>this.spikes.create</code>. Il faut indiquer les coordonnées et l'objet à faire apparaître
+              (<em>spawn</em> en anglais).
+            </p>
 
             <pre><code class="language-js">
               this.spikes.create(X, Y, "NOM DE L'OBJET");
             </code></pre>
 
-            <p>Normalement, si tu as tout bien fait, les piques apparaîssent sur ton écran mais n'ont aucun effet sur le joueur. Changeons cela!</p>
+            <p>Normalement, si tu as tout bien fait, les piques apparaîssent sur ton écran mais n'ont aucun effet sur le
+              joueur. Changeons cela!</p>
 
-            <p>On va ajouter un chevauchement (<em>overlap</em> en anglais) entre le joueur et les piques, comme on l'avait fait pour la pièce gagnante dans la fiche précédente.</p>
+            <p>On va ajouter un chevauchement (<em>overlap</em> en anglais) entre le joueur et les piques, comme on
+              l'avait fait pour la pièce gagnante dans la fiche précédente.</p>
 
             <pre><code class="language-js">
               this.physics.add.overlap(this.player, this.spikes, function(player, coin) {
@@ -123,7 +144,8 @@
               }, null, this);
             </code></pre>
 
-            <p>Que doit-il se passer lorsqu'on touche une pique? Notre joueur doit revenir au début du jeu. Pour cela, tu dois changer ses coordonnées X et Y:</p>
+            <p>Que doit-il se passer lorsqu'on touche une pique? Notre joueur doit revenir au début du jeu. Pour cela,
+              tu dois changer ses coordonnées X et Y:</p>
 
             <pre><code class="language-js">
               this.player.x = /*quelque chose*/;
@@ -139,14 +161,17 @@
       <div class="card">
         <div class="card-header" id="heading3">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3"
+              aria-expanded="false" aria-controls="collapse3">
               Étape 3 - Carte facile 🗺️
             </button>
           </h2>
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître sur notre carte, non? Ce serait plus simple si on pouvait dessiner une grille de notre carte que notre programme utiliserait pour créer la carte "automatiquement"...</p>
+            <p>C'est long de devoir écrire une ligne de code par objet qu'on veut faire apparaître sur notre carte, non?
+              Ce serait plus simple si on pouvait dessiner une grille de notre carte que notre programme utiliserait
+              pour créer la carte "automatiquement"...</p>
 
             <p>Regarde cette grille:</p>
 
@@ -169,22 +194,31 @@
               '11111111111111111111111111';
             </code></pre>
 
-            <p>Peux-tu deviner à quoi correspondent les <code>1</code>, <code>2</code>, <code>c</code> et les <code>s</code>?</p>
+            <p>Peux-tu deviner à quoi correspondent les <code>1</code>, <code>2</code>, <code>c</code> et les
+              <code>s</code>?
+            </p>
 
             <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3a" role="button" aria-expanded="false" aria-controls="collapseAnswer3a">Réponse</a>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3a" role="button"
+                aria-expanded="false" aria-controls="collapseAnswer3a">Réponse</a>
             </p>
             <div class="collapse mb-3" id="collapseAnswer3a">
               <div class="card card-body">
                 <p>Les <code>c</code> correspondent aux pièces (<em>coin</em> en anglais).</p>
                 <p>Les <code>s</code> correspondent aux piques (<em>spike</em> en anglais).</p>
-                <p>Les <code>1</code> et les <code>2</code> correspondent aux plateformes. On verra à l'étape suivante qu'il peut y avoir plusieurs types de plateformes.</p>
+                <p>Les <code>1</code> et les <code>2</code> correspondent aux plateformes. On verra à l'étape suivante
+                  qu'il peut y avoir plusieurs types de plateformes.</p>
               </div>
             </div>
 
-            <p>Cette grille est super importante! C'est ce qui va nous permettre de créer un très très grand monde rapidement. La première chose que tu dois faire, c'est créer ta propre grille. Commence avec seulement des plateformes (<code>1</code>).</p>
+            <p>Cette grille est super importante! C'est ce qui va nous permettre de créer un grand monde plus
+              rapidement. Pour un très grand monde, on utilisera encore une autre solution... dans les dernières fiches.
+              La première chose que tu dois faire, c'est créer ta propre grille. Commence avec seulement des
+              plateformes (<code>1</code>).</p>
 
-            <p>Sauvegarde ensuite ta grille dans une <b>constante</b> qu'on appellera <code>map</code> (<em>carte</em> en anglais). Tu peux déclarer cette constante tout en haut de ton programme, avant même de déclarer la variable <code>config</code>. Voici mon exemple de grille simple:</p>
+            <p>Sauvegarde ensuite ta grille dans une <b>constante</b> qu'on appellera <code>map</code> (<em>carte</em>
+              en anglais). Tu peux déclarer cette constante tout en haut de ton programme, avant même de déclarer la
+              variable <code>config</code>. Voici mon exemple de grille simple:</p>
 
             <pre><code class="language-js">
               const map = '           ' +
@@ -197,16 +231,18 @@
             <div class="alert alert-warning" role="alert">
               <p>
                 <i class="fas fa-exclamation-circle"></i> Assure-toi que chaque ligne:
-                <ul>
-                  <li>ait deux guillemets (<code>'</code>), un au début et un à la fin;</li>
-                  <li>contienne le même nombre de caractères (les espaces comptent aussi!)</li>
-                  <li>finisse par un <code>+</code> sauf la dernière qui finit par un <code>;</code></li>
-                </ul>
+              <ul>
+                <li>ait deux guillemets (<code>'</code>), un au début et un à la fin;</li>
+                <li>contienne le même nombre de caractères (les espaces comptent aussi!)</li>
+                <li>finisse par un <code>+</code> sauf la dernière qui finit par un <code>;</code></li>
+              </ul>
               </p>
             </div>
 
 
-            <p>Dans la fonction <code>create</code>, tu peux mettre en commentaire (avec les <code>//</code>) la partie où tu faisais apparaître toutes tes plateformes. Si tu lances ton programme, elles ont disparu... c'est normal!</p>
+            <p>Dans la fonction <code>create</code>, tu peux mettre en commentaire (avec les <code>//</code>) la partie
+              où tu faisais apparaître toutes tes plateformes. Si tu lances ton programme, elles ont disparu... c'est
+              normal!</p>
 
             <pre>
               <code class="language-js">
@@ -217,9 +253,14 @@
               </code>
             </pre>
 
-            <p>On va faire apparaître nos plateformes en fonction de notre grille sauvegardée dans notre constante <code>map</code>. L'ordinateur va analyser notre grille, ligne par ligne et colonne par colonne. Dans une case, si l'ordinateur voit un espace, il ne fera rien. Par contre, si l'ordinateur voit un <code>1</code>, il créera une plateforme à cet endroit.</p>
+            <p>On va faire apparaître nos plateformes en fonction de notre grille sauvegardée dans notre constante
+              <code>map</code>. L'ordinateur va analyser notre grille, ligne par ligne et colonne par colonne. Dans une
+              case, si l'ordinateur voit un espace, il ne fera rien. Par contre, si l'ordinateur voit un <code>1</code>,
+              il créera une plateforme à cet endroit.
+            </p>
 
-            <p>Pour que l'ordinateur sache où positionner exactement les plateformes sur l'écran, on va créer une variable "X" et une variable "Y" . Dans la fonction <code>create</code>, ajoute tes variables:</p>
+            <p>Pour que l'ordinateur sache où positionner exactement les plateformes sur l'écran, on va créer une
+              variable "X" et une variable "Y" . Dans la fonction <code>create</code>, ajoute tes variables:</p>
 
             <pre><code class="language-js">
               let X = 40;
@@ -229,11 +270,13 @@
             <p>Ensuite, on va ajouter deux boucles <code>for</code>... l'une dans l'autre 🤯. Pourquoi???</p>
 
             <p>
-              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint3" role="button" aria-expanded="false" aria-controls="collapseHint3">Indice</a>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint3" role="button"
+                aria-expanded="false" aria-controls="collapseHint3">Indice</a>
             </p>
             <div class="collapse mb-3" id="collapseHint3">
               <div class="card card-body">
-                <p>C'est parce qu'on veut que l'ordinateur analyse chaque ligne de notre grille (première boucle), et pour chaque ligne, on veut qu'il analyse chaque colonne (deuxième boucle). </p>
+                <p>C'est parce qu'on veut que l'ordinateur analyse chaque ligne de notre grille (première boucle), et
+                  pour chaque ligne, on veut qu'il analyse chaque colonne (deuxième boucle). </p>
               </div>
             </div>
 
@@ -248,12 +291,14 @@
             <p>Pourquoi ma boucle se répète-t-elle 5 fois?</p>
 
             <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3c" role="button" aria-expanded="false" aria-controls="collapseAnswer3c">Réponse</a>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3c" role="button"
+                aria-expanded="false" aria-controls="collapseAnswer3c">Réponse</a>
             </p>
             <div class="collapse mb-3" id="collapseAnswer3c">
               <div class="card card-body">
-              <p>Parce que dans mon grille (<code>map</code>), il y a 5 lignes. Si ta grille a 7 lignes, ta boucle ressemblera plutôt à ceci: </p>
-              <pre><code class="language-js">
+                <p>Parce que dans mon grille (<code>map</code>), il y a 5 lignes. Si ta grille a 7 lignes, ta boucle
+                  ressemblera plutôt à ceci: </p>
+                <pre><code class="language-js">
                 for (let l = 0; l < 7; l++) {
                   // faire quelque chose pour chaque ligne
                 }
@@ -261,14 +306,17 @@
               </div>
             </div>
 
-            <p>À la fin de chaque ligne, que doit-on faire? Eh oui, passer à la ligne suivante! Pour l'ordinateur, ça veut dire que les coordonnées en Y doivent changer. Comment faire pour faire "descendre" les coordonnées en Y?</p>
+            <p>À la fin de chaque ligne, que doit-on faire? Eh oui, passer à la ligne suivante! Pour l'ordinateur, ça
+              veut dire que les coordonnées en Y doivent changer. Comment faire pour faire "descendre" les coordonnées
+              en Y?</p>
 
             <p>
-              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3d" role="button" aria-expanded="false" aria-controls="collapseAnswer3d">Réponse</a>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3d" role="button"
+                aria-expanded="false" aria-controls="collapseAnswer3d">Réponse</a>
             </p>
             <div class="collapse mb-3" id="collapseAnswer3d">
               <div class="card card-body">
-              <p>On ajoute 40 à notre variable <code>Y</code></p>
+                <p>On ajoute 40 à notre variable <code>Y</code></p>
                 <pre><code class="language-js">
                   for (let l = 0; l < 5; l++) {
                     // faire quelque chose pour chaque ligne
@@ -281,7 +329,9 @@
               </div>
             </div>
 
-            <p>Nous sommes maintenant prêts à analyser chacune de nos lignes, colonne, par colonne. Or dans chaque ligne, il y a le même nombre de colonnes (11 dans mon grille). Je vais donc ajouter ma deuxième boucle de cette manière:</p>
+            <p>Nous sommes maintenant prêts à analyser chacune de nos lignes, colonne, par colonne. Or dans chaque
+              ligne, il y a le même nombre de colonnes (11 dans mon grille). Je vais donc ajouter ma deuxième boucle de
+              cette manière:</p>
 
 
             <pre><code class="language-js">
@@ -297,7 +347,9 @@
             </code></pre>
 
 
-            <p>Dans la deuxième boucle, on va dessiner les plateformes. Mais attention! L'ordinateur doit créer une plateforme uniquement si le caractère dans la case qu'il analyse est un <code>1</code>. On va donc créer une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
+            <p>Dans la deuxième boucle, on va dessiner les plateformes. Mais attention! L'ordinateur doit créer une
+              plateforme uniquement si le caractère dans la case qu'il analyse est un <code>1</code>. On va donc créer
+              une variable pour ce caractère et ensuite on dessine un bloc s'il vaut "1".</p>
 
             <pre><code class="language-js">
               let ca = map[11*l + c];
@@ -312,7 +364,8 @@
               }
             </code></pre>
 
-            <p>De nouveau, si tu n'as pas <b>11</b> colonnes (ou caractères) par ligne, change le <b>11</b> en un autre nombre.</p>
+            <p>De nouveau, si tu n'as pas <b>11</b> colonnes (ou caractères) par ligne, change le <b>11</b> en un autre
+              nombre.</p>
 
             <p>Pour passer à la case suivante, il suffit d'incrémenter notre valeur en X:</p>
 
@@ -330,7 +383,8 @@
               X += 40;
             </code></pre>
 
-            <p>Dernière étape: quand on change de ligne, on doit aussi remettre la coordonnée X au début de la ligne.</p>
+            <p>Dernière étape: quand on change de ligne, on doit aussi remettre la coordonnée X au début de la ligne.
+            </p>
 
             <pre><code class="language-js">
               for (let l = 0; l < 5; l++) {
@@ -355,7 +409,8 @@
 
             <p>Maintenant ton code va dessiner toutes les plateformes tout seul!</p>
 
-            <p>On pourrait aussi ajouter nos piques dans la carte directement. Pour ce faire, écris un "p" la où tu veux tes piques, et ajoute un <code>else if</code> dans ton code</p>
+            <p>On pourrait aussi ajouter nos piques dans la carte directement. Pour ce faire, écris un "p" la où tu veux
+              tes piques, et ajoute un <code>else if</code> dans ton code</p>
 
             <pre><code class="language-js">
               if (ca === '1') {
@@ -375,14 +430,18 @@
       <div class="card">
         <div class="card-header" id="heading4">
           <h2 class="mb-0">
-            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4"
+              aria-expanded="false" aria-controls="collapse4">
               Étape 4 - Différentes plateformes
             </button>
           </h2>
         </div>
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Tu te demandes sûrement pourquoi on a mis "1" pour les plateformes et non "p" (ou une autre lettre)? C'est parce qu'on pourrait avoir différents types de plateformes. Crée une deuxième plateforme et <code>load</code>-la correctement dans ton code, sous le nom de "platform2"</p>
+            <p>Tu te demandes sûrement pourquoi on a mis "1" pour les plateformes et non "p" (ou une autre lettre)?
+              C'est parce qu'on pourrait avoir différents types de plateformes. Crée une deuxième plateforme et
+              <code>load</code>-la correctement dans ton code, sous le nom de "platform2"
+            </p>
 
             <p>Ensuite, si le carctère est égal à "2", tu vas simplement créer cette deuxième plateforme.</p>
 
@@ -398,9 +457,12 @@
 
             <p>Ce serait cool de pouvoir changer l'arrière-plan aussi non? Noir c'est un peu déprimant...</p>
 
-            <p>Commence par soit dessiner, soit trouver une image d'arrière-plan qui te plaît! Lorsque c'est le cas, <code>load</code> cette image comme tu as chargé toutes les autres.</p>
+            <p>Commence par soit dessiner, soit trouver une image d'arrière-plan qui te plaît! Lorsque c'est le cas,
+              <code>load</code> cette image comme tu as chargé toutes les autres.
+            </p>
 
-            <p>Ensuite, dans la fonction <code>create</code>, on va afficher cette image. Assure-toi que c'est la première chose que tu fais, pour qu'elle apparaisse bien derrière tout le reste.</p>
+            <p>Ensuite, dans la fonction <code>create</code>, on va afficher cette image. Assure-toi que c'est la
+              première chose que tu fais, pour qu'elle apparaisse bien derrière tout le reste.</p>
 
             <pre><code class="language-js">
               this.add.image(400, 250, 'background').setDisplaySize(800, 500);
@@ -408,7 +470,8 @@
 
             <p>On fait apparaître l'image au milieu de l'écran, et on change la taille pour remplir tout l'écran.</p>
 
-            <p>Tu verras sûrement que cela ne couvre quand même pas tout l'écran. Pour ce changer, on fait simplement apparaître plusieurs images:</p>
+            <p>Tu verras sûrement que cela ne couvre quand même pas tout l'écran. Pour ce changer, on fait simplement
+              apparaître plusieurs images:</p>
 
             <pre><code class="language-js">
               this.add.image(-1200, 250, 'background').setDisplaySize(800, 500);
@@ -418,7 +481,8 @@
               this.add.image(1600, 250, 'background').setDisplaySize(800, 500);
             </code></pre>
 
-            <p>Voilà, tu as maintenant un joli arrière-plan! Tu peux alors rendre ton jeu aussi long que tu le souhaites :)</p>
+            <p>Voilà, tu as maintenant un joli arrière-plan! Tu peux alors rendre ton jeu aussi long que tu le souhaites
+              :)</p>
 
           </div>
         </div>
@@ -430,22 +494,30 @@
 
 
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
-    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.linkedin.com/company/techies-lab/"><i class="fab fa-linkedin"></i></a>
-    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://tictaclab.org/"><i class="fas fa-globe"></i></i></a>
+      <a href="https://www.linkedin.com/company/tictaclab/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/TicTacLabBXL/"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/tictaclabbxl/"><i class="fab fa-instagram"></i></a>
+      <a href="https://tictaclab-org.github.io/Fiches/"><i class="fa fa-list"></i> Retour vers les Fiches</a>
+    </div>
+    <div class="footer-copyright">
+      <a href="https://tictaclab.org" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+        <i class="far fa-copyright"></i> 2023 Tic Tac Lab ASBL. All rights reserved.
+      </a>
+    </div>
   </div>
-  <div class="footer-copyright">
-    <a href="https://techieslab.be" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
-      <i class="far fa-copyright"></i> 2022 Techies Lab ASBL. All rights reserved.
-    </a>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="javascript/prism.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="javascript/prism.js"></script>
 </body>
+
 </html>
